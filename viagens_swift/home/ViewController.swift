@@ -31,14 +31,24 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return sessaoDeViagens?[section].numeroDeLinhas ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ViagemTableViewCell") as? ViagemTableViewCell else{
             fatalError("Erro na criação da celula")
         }
-        return cell
+        
+        let viewModel = sessaoDeViagens?[indexPath.section]
+        
+        switch viewModel?.tipo {
+        case .destaques:
+            cell.configuraCelular(viewModel?.viagens[indexPath.row])
+            return cell
+        default:
+            return UITableViewCell()
+        }
+        
     }
 }
 
