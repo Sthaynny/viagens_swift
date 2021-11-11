@@ -60,9 +60,8 @@
 		3F788CC2273C53410052ADDD /* viagens_swift */ = {
 			isa = PBXGroup;
 			children = (
+				3F788CE2273CA2B90052ADDD /* AppDelegate */,
 				3F788CDF273C5FB60052ADDD /* Home */,
-				3F788CC3273C53410052ADDD /* AppDelegate.swift */,
-				3F788CC5273C53410052ADDD /* SceneDelegate.swift */,
 				3F788CCC273C53420052ADDD /* Assets.xcassets */,
 				3F788CCE273C53420052ADDD /* LaunchScreen.storyboard */,
 				3F788CD1273C53420052ADDD /* Info.plist */,
@@ -73,19 +72,11 @@
 		3F788CDF273C5FB60052ADDD /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3F788CE0273C5FD10052ADDD /* components */,
+				3F788CE1273C5FE00052ADDD /* home_header */,
 				3F788CC7273C53410052ADDD /* ViewController.swift */,
 				3F788CC9273C53410052ADDD /* Main.storyboard */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		3F788CE0273C5FD10052ADDD /* components */ = {
-			isa = PBXGroup;
-			children = (
-				3F788CE1273C5FE00052ADDD /* home_header */,
-			);
-			path = components;
 			sourceTree = "<group>";
 		};
 		3F788CE1273C5FE00052ADDD /* home_header */ = {
@@ -95,6 +86,15 @@
 				3F788CD7273C5B260052ADDD /* HomeTableViewHeader.xib */,
 			);
 			path = home_header;
+			sourceTree = "<group>";
+		};
+		3F788CE2273CA2B90052ADDD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F788CC3273C53410052ADDD /* AppDelegate.swift */,
+				3F788CC5273C53410052ADDD /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

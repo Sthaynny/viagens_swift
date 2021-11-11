@@ -16,14 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eem-5o-hjK">
-                                <rect key="frame" x="-12" y="27" width="439" height="869"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eem-5o-hjK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eem-5o-hjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dnW-kw-dzU"/>
+                            <constraint firstItem="Eem-5o-hjK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mHp-7a-OAo"/>
+                            <constraint firstItem="Eem-5o-hjK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pwu-Ac-ATE"/>
+                            <constraint firstAttribute="bottom" secondItem="Eem-5o-hjK" secondAttribute="bottom" id="rk0-m9-GAL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="viagensTableView" destination="Eem-5o-hjK" id="bM9-10-2gE"/>
