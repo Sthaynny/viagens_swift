@@ -24,6 +24,9 @@
 		3F788D04273CC5E30052ADDD /* TiposDeViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F788D03273CC5E30052ADDD /* TiposDeViagem.swift */; };
 		3F788D06273CC6060052ADDD /* DecodableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F788D05273CC6060052ADDD /* DecodableData.swift */; };
 		3F788D08273CC7900052ADDD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F788D07273CC7900052ADDD /* UIView+Extension.swift */; };
+		3F9691E327469F0700835B18 /* OfertaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9691E127469F0700835B18 /* OfertaTableViewCell.swift */; };
+		3F9691E427469F0700835B18 /* OfertaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9691E227469F0700835B18 /* OfertaTableViewCell.xib */; };
+		3F9691E627469FF200835B18 /* ViagemOfertaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9691E527469FF200835B18 /* ViagemOfertaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		3F788D03273CC5E30052ADDD /* TiposDeViagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiposDeViagem.swift; sourceTree = "<group>"; };
 		3F788D05273CC6060052ADDD /* DecodableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableData.swift; sourceTree = "<group>"; };
 		3F788D07273CC7900052ADDD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3F9691E127469F0700835B18 /* OfertaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfertaTableViewCell.swift; sourceTree = "<group>"; };
+		3F9691E227469F0700835B18 /* OfertaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfertaTableViewCell.xib; sourceTree = "<group>"; };
+		3F9691E527469FF200835B18 /* ViagemOfertaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemOfertaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +128,8 @@
 		3F788CE5273CB2A80052ADDD /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				3F788CE6273CB2D90052ADDD /* ViagemTableViewCell.swift */,
-				3F788CE7273CB2D90052ADDD /* ViagemTableViewCell.xib */,
+				3F9691E027469EDB00835B18 /* oferta */,
+				3F9691DF27469ECA00835B18 /* destaque */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -168,8 +174,27 @@
 			children = (
 				3F788CFD273CBD4D0052ADDD /* ViagemViewModel.swift */,
 				3F788CFF273CBEEB0052ADDD /* ViagemDestaqueViewModel.swift */,
+				3F9691E527469FF200835B18 /* ViagemOfertaViewModel.swift */,
 			);
 			path = view_model;
+			sourceTree = "<group>";
+		};
+		3F9691DF27469ECA00835B18 /* destaque */ = {
+			isa = PBXGroup;
+			children = (
+				3F788CE6273CB2D90052ADDD /* ViagemTableViewCell.swift */,
+				3F788CE7273CB2D90052ADDD /* ViagemTableViewCell.xib */,
+			);
+			path = destaque;
+			sourceTree = "<group>";
+		};
+		3F9691E027469EDB00835B18 /* oferta */ = {
+			isa = PBXGroup;
+			children = (
+				3F9691E127469F0700835B18 /* OfertaTableViewCell.swift */,
+				3F9691E227469F0700835B18 /* OfertaTableViewCell.xib */,
+			);
+			path = oferta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +261,7 @@
 				3F788CCD273C53420052ADDD /* Assets.xcassets in Resources */,
 				3F788CCB273C53410052ADDD /* Main.storyboard in Resources */,
 				3F788CE9273CB2D90052ADDD /* ViagemTableViewCell.xib in Resources */,
+				3F9691E427469F0700835B18 /* OfertaTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +276,8 @@
 				3F788D02273CBF870052ADDD /* Viagem.swift in Sources */,
 				3F788CC8273C53410052ADDD /* ViewController.swift in Sources */,
 				3F788CE8273CB2D90052ADDD /* ViagemTableViewCell.swift in Sources */,
+				3F9691E627469FF200835B18 /* ViagemOfertaViewModel.swift in Sources */,
+				3F9691E327469F0700835B18 /* OfertaTableViewCell.swift in Sources */,
 				3F788D06273CC6060052ADDD /* DecodableData.swift in Sources */,
 				3F788D04273CC5E30052ADDD /* TiposDeViagem.swift in Sources */,
 				3F788D00273CBEEB0052ADDD /* ViagemDestaqueViewModel.swift in Sources */,
