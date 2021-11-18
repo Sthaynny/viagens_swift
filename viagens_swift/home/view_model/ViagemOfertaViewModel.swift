@@ -24,6 +24,8 @@ class ViagemOfertaViewModel: ViagemViewModel{
         return viagens.count
     }
     
+    // MARK: - Inicializador
+    
     init(_ viagens: [Viagem]){
         self.viagens = viagens
     }
