@@ -44,20 +44,22 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ViagemTableViewCell") as? ViagemTableViewCell else{
-            fatalError("Erro na criação da ViagemTableViewCell")
-        }
+        
         
         let viewModel = sessaoDeViagens?[indexPath.section]
         
         switch viewModel?.tipo {
         case .destaques:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ViagemTableViewCell") as? ViagemTableViewCell else{
+                fatalError("Erro na criação da ViagemTableViewCell")
+            }
             cell.configuraCelular(viewModel?.viagens[indexPath.row])
             return cell
         case .ofertas:
             guard let cellOferta = tableView.dequeueReusableCell(withIdentifier: "OfertaTableViewCell") as? OfertaTableViewCell else {
                 fatalError("Erro na criação da OfertaTableViewCell")
             }
+            cellOferta.configuraCelula(viewModel?.viagens)
             return cellOferta
         default:
             return UITableViewCell()
@@ -67,6 +69,8 @@ extension ViewController: UITableViewDataSource{
 }
 
 extension ViewController: UITableViewDelegate{
+   
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         if section == 0{
