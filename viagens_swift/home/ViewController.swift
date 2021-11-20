@@ -33,11 +33,17 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource{
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return sessaoDeViagens?.count ?? 0
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detalheController = DetalheViewController(nibName: "DetalheViewController", bundle: nil)
+        navigationController?.pushViewController(detalheController, animated: true)
     }
     
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sessaoDeViagens?.count ?? 0
+    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sessaoDeViagens?[section].numeroDeLinhas ?? 0

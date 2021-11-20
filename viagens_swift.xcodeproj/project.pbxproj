@@ -27,6 +27,8 @@
 		3F9A6376274965A600DEE402 /* OfertaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A6374274965A600DEE402 /* OfertaTableViewCell.xib */; };
 		3F9A6377274965A600DEE402 /* OfertaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A6375274965A600DEE402 /* OfertaTableViewCell.swift */; };
 		3F9A63792749667E00DEE402 /* server-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A63782749667E00DEE402 /* server-response.json */; };
+		3F9A637D27496D6800DEE402 /* DetalheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A637B27496D6800DEE402 /* DetalheViewController.xib */; };
+		3F9A637E27496D6800DEE402 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A637C27496D6800DEE402 /* DetalheViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		3F9A6374274965A600DEE402 /* OfertaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfertaTableViewCell.xib; sourceTree = "<group>"; };
 		3F9A6375274965A600DEE402 /* OfertaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfertaTableViewCell.swift; sourceTree = "<group>"; };
 		3F9A63782749667E00DEE402 /* server-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "server-response.json"; path = "../../../../../Downloads/alura-viagens-parte-II-9fc04d5c93e07fdc351a3a881d92565a4020bda6/arquivos/server-response.json"; sourceTree = "<group>"; };
+		3F9A637B27496D6800DEE402 /* DetalheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetalheViewController.xib; path = "../../../../../Downloads/alura-viagens-parte-II-9fc04d5c93e07fdc351a3a881d92565a4020bda6/AluraViagens/View/Detalhe/DetalheViewController.xib"; sourceTree = "<group>"; };
+		3F9A637C27496D6800DEE402 /* DetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalheViewController.swift; path = "../../../../../Downloads/alura-viagens-parte-II-9fc04d5c93e07fdc351a3a881d92565a4020bda6/AluraViagens/View/Detalhe/DetalheViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 		3F9A637A27496A1300DEE402 /* detalhes */ = {
 			isa = PBXGroup;
 			children = (
+				3F9A637C27496D6800DEE402 /* DetalheViewController.swift */,
+				3F9A637B27496D6800DEE402 /* DetalheViewController.xib */,
 			);
 			path = detalhes;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9A637D27496D6800DEE402 /* DetalheViewController.xib in Resources */,
 				3F788CD0273C53420052ADDD /* LaunchScreen.storyboard in Resources */,
 				3F788CD8273C5B260052ADDD /* HomeTableViewHeader.xib in Resources */,
 				3F788CCD273C53420052ADDD /* Assets.xcassets in Resources */,
@@ -293,6 +300,7 @@
 				3F788CFE273CBD4D0052ADDD /* ViagemViewModel.swift in Sources */,
 				3F788CC4273C53410052ADDD /* AppDelegate.swift in Sources */,
 				3F9A6377274965A600DEE402 /* OfertaTableViewCell.swift in Sources */,
+				3F9A637E27496D6800DEE402 /* DetalheViewController.swift in Sources */,
 				3F788CC6273C53410052ADDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
