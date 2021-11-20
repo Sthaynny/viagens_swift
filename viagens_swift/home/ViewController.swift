@@ -27,32 +27,47 @@ class ViewController: UIViewController {
         viagensTableView.delegate = self
     }
 
+    func irParaDetalhe(_ viagem: Viagem?){
+        if let viageSelecionada = viagem {
+            let detalheController = DetalheViewController.instanciar(viageSelecionada)
+            navigationController?.pushViewController(detalheController, animated: true)
+        }
+        
+    }
 
 }
 
 
 extension ViewController: UITableViewDataSource{
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detalheController = DetalheViewController(nibName: "DetalheViewController", bundle: nil)
-        navigationController?.pushViewController(detalheController, animated: true)
+        let viewModel = secaoDeViagens?[indexPath.section]
+        
+        switch viewModel?.tipo {
+        case .destaques, .internacionais:
+            let viagemSelecionada = viewModel?.viagens[indexPath.row]
+            irParaDetalhe(viagemSelecionada)
+        case .ofertas:
+            break
+        default:
+            break
+        }
+     
     }
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sessaoDeViagens?.count ?? 0
+        return secaoDeViagens?.count ?? 0
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sessaoDeViagens?[section].numeroDeLinhas ?? 0
+        return secaoDeViagens?[section].numeroDeLinhas ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let viewModel = sessaoDeViagens?[indexPath.section]
+        let viewModel = secaoDeViagens?[indexPath.section]
         
         switch viewModel?.tipo {
         case .destaques:
@@ -66,6 +81,7 @@ extension ViewController: UITableViewDataSource{
                 fatalError("Erro na criação da OfertaTableViewCell")
             }
             cellOferta.configuraCelula(viewModel?.viagens)
+            cellOferta.delegate = self
             return cellOferta
         default:
             return UITableViewCell()
@@ -94,5 +110,11 @@ extension ViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 400 : 450
+    }
+}
+
+extension ViewController: OfertaTableViewCellDelegate{
+    func didSelectView(_ viagem: Viagem?) {
+        irParaDetalhe(viagem)
     }
 }

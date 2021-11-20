@@ -8,7 +8,7 @@
 import Foundation
 
 
-let sessaoDeViagens: [ViagemViewModel]? = load("server-response.json")
+let secaoDeViagens: [ViagemViewModel]? = load("server-response.json")
 
 func load(_ filename: String) -> [ViagemViewModel]? {
     let data: Data
